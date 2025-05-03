@@ -2,7 +2,6 @@
   "name": "production-project",
   "version": "1.0.0",
   "main": "index.js",
-
   "scripts": {
     "test": "jest",
     "dev": "webpack --mode development",
