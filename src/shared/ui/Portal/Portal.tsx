@@ -11,7 +11,7 @@ interface PortalProps {
 export const Portal = (props: PortalProps) => {
     const {
         children,
-        element = document.getElementById('storybook-root') || document.getElementById('root') || document.body,
+        element = document.getElementById('storybook-root') || document.body,
     } = props
     return createPortal(children, element)
 };
