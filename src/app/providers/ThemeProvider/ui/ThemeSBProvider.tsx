@@ -1,6 +1,9 @@
 import { FC, ReactNode, useMemo, useState } from "react";
-import { Theme } from "..";
-import { ThemeContext } from "../lib/ThemeContext";
+// import { Theme } from "..";
+// import { ThemeContext } from "../lib/ThemeContext";
+import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext'
+
+const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT
 
 interface ThemeSBPRoveiderProps {
     children: ReactNode,
@@ -8,7 +11,7 @@ interface ThemeSBPRoveiderProps {
 }
 
 const ThemeSBProvider: FC<ThemeSBPRoveiderProps> = ({children, initialTheme}) => {
-    const [theme, setTheme] = useState(initialTheme);
+    const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
 
     const toggleTheme = () => {
         setTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
