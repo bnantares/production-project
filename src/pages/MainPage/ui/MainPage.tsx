@@ -9,7 +9,7 @@ export default function MainPage() {
     <div>
       {/* <BugButton></BugButton> */}
       {t("Главная страница")}
-      <Counter/>
+      {/* <Counter/> */}
     </div>
   )
 }
