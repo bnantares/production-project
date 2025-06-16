@@ -7,10 +7,18 @@ import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Modal } from 'shared/ui/Modal/Modal';
+import { useDispatch } from 'react-redux';
+import { userActions } from 'entities/User';
 
 const App = () => {
   const { theme } = useTheme();
-  
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+      dispatch(userActions.initAuthdata())
+  }, [dispatch])
+
+
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback = {''}>
