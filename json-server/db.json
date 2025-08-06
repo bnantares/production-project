@@ -51,6 +51,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstname": "Антон",
+    "lastname": "Петров",
+    "age": 30,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://picsum.photos/id/237/200/300"
   }
 }
