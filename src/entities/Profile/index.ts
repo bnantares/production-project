@@ -1,7 +1,8 @@
 export {
     Profile,
     ProfileSchema
-} from './model/types/Profile';
+// @ts-ignore
+} from './model/types/profile';
 
 export {
     profileActions,
